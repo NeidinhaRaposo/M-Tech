@@ -1,0 +1,106 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #60267A;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #673F85;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #FFB033;
+}
+
+/* Seção principal */
+main {
+    width: 90%;
+    max-width: 600px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Registro de Ponto */
+.clock-in-out {
+    background-color: #673F85;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.clock-in-out h2 {
+    color: #FFB033;
+    margin-bottom: 10px;
+}
+
+.time-display p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.time-display span {
+    color: #FFB033;
+}
+
+.clock-button {
+    background-color: #FFB033;
+    color: #60267A;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Histórico de Ponto */
+.records {
+    background-color: #60267A;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.records h3 {
+    color: #FFB033;
+    margin-bottom: 10px;
+}
+
+.records ul {
+    list-style-type: none;
+}
+
+.records li {
+    padding: 8px 0;
+    border-bottom: 1px solid #673F85;
+}
+
+/* Rodapé */
+footer {
+    margin-top: auto;
+    background-color: #673F85;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    color: #FFB033;
+}

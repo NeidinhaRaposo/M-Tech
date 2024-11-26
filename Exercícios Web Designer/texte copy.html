@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrossel de Imagens</title>
+<style>
+.carrossel-container { max-width: 600px; margin: auto; position: relative; }
+.imagem { display: none; width: 100%; }
+.ativo { display: block; }
+.controles { text-align: center; margin-top: 10px; }
+.botao { padding: 10px; cursor: pointer; background-color: #ddd; border: none; }
+.botao:hover { background-color: #aaa; }
+</style>
+</head>
+<body>
+<h3>Carrossel de Imagens</h3>
+<div class="carrossel-container">
+<img src="imagem1.jpg" class="imagem ativo" alt="Imagem 1">
+<img src="imagem2.jpg" class="imagem" alt="Imagem 2">
+<img src="imagem3.jpg" class="imagem" alt="Imagem 3">
+</div>
+<div class="controles">
+<button class="botao" onclick="mostrarImagem(-1)">Anterior</button>
+<button class="botao" onclick="mostrarImagem(1)">Próxima</button>
+</div>
+<script>
+let indiceAtual = 0;
+const imagens = document.getElementsByClassName('imagem');
+function mostrarImagem(direcao) {
+imagens[indiceAtual].classList.remove('ativo');
+indiceAtual = (indiceAtual + direcao + imagens.length) % imagens.length;
+imagens[indiceAtual].classList.add('ativo');
+}
+</script>
+</body>
+</html>

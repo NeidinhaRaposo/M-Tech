@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas - Drag-and-Drop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        #listaTarefas {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            min-height: 150px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+        }
+        .item-tarefa {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f0f0f0;
+            cursor: grab;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .item-tarefa.dragging {
+            opacity: 0.5;
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h3>Lista de Tarefas</h3>
+    <input type="text" id="novaTarefa" placeholder="Nova Tarefa">
+    <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+    <div id="listaTarefas" ondragover="permitirSoltar(event)" ondrop="soltar(event)"></div>
+
+    <script>
+        function permitirSoltar(event) {
+            event.preventDefault();
+        }
+
+        function arrastar(event) {
+            event.dataTransfer.setData("text/plain", event.target.id);
+            event.target.classList.add("dragging");
+        }
+
+        function pararDeArrastar(event) {
+            event.target.classList.remove("dragging");
+        }
+
+        function soltar(event) {
+            event.preventDefault();
+            const idTarefa = event.dataTransfer.getData("text/plain");
+            const tarefa = document.getElementById(idTarefa);
+
+            // Adiciona a tarefa no local correto dentro do contêiner
+            const lista = document.getElementById('listaTarefas');
+            const elementoAbaixo = document.elementFromPoint(event.clientX, event.clientY);
+
+            if (elementoAbaixo && elementoAbaixo !== tarefa && elementoAbaixo.classList.contains('item-tarefa')) {
+                lista.insertBefore(tarefa, elementoAbaixo);
+            } else {
+                lista.appendChild(tarefa);
+            }
+        }
+
+        function adicionarTarefa() {
+            const textoTarefa = document.getElementById('novaTarefa').value;
+            if (textoTarefa.trim() !== '') {
+                const tarefa = document.createElement('div');
+                tarefa.id = `tarefa-${Date.now()}`;
+                tarefa.className = 'item-tarefa';
+                tarefa.draggable = true;
+                tarefa.ondragstart = arrastar;
+                tarefa.ondragend = pararDeArrastar;
+                tarefa.textContent = textoTarefa;
+                document.getElementById('listaTarefas').appendChild(tarefa);
+                document.getElementById('novaTarefa').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
+
+

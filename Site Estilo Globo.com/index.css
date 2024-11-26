@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header {
+    background-color: #00008B; /* Mantém a cor do cabeçalho */
+    color: #fff;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white; /* Texto dos links em branco */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: white; /* Cor do botão */
+    border: none;
+    color: black; /* Cor do texto do botão */
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.search-bar button:hover {
+    background-color: #444; /* Cor de fundo ao passar o mouse */
+    color: white; /* Muda a cor do texto ao passar o mouse */
+}
+
+main {
+    padding: 20px;
+}
+
+.main-news {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.main-news img {
+    width: 100%;
+    height: auto;
+}
+
+.main-news h2 {
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.main-news p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.secondary-news h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.news-grid {
+    display: flex;
+    gap: 15px;
+}
+
+.news-grid article {
+    background-color: #222; /* Fundo dos artigos em um tom escuro */
+    padding: 15px;
+    flex: 1;
+    border: 1px solid #444; /* Bordas dos artigos em cinza escuro */
+    border-radius: 5px;
+}
+
+.news-grid article img {
+    width: 100%;
+    height: auto;
+}
+
+.news-grid article h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.news-grid article p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    background-color: #00008B; /* Mantém a cor do rodapé */
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+article a {
+    color: inherit; /* Herda a cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    display: block; /* Faz com que o link cubra todo o artigo */
+}
+
+article a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efeito de hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .news-grid {
+        flex-direction: column;
+    }
+}
+

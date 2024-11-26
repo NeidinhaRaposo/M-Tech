@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Declaração do tipo de documento como HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres utilizado como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a exibição para dispositivos móveis, ajustando a largura do layout -->
+    <meta name="description" content="Cursos de informática com M-Tech, aulas de terça a sexta.">
+    <!-- Define uma descrição para os motores de busca -->
+    <meta name="keywords" content="informática, cursos, M-Tech, tecnologia">
+    <!-- Define palavras-chave para otimização em motores de busca (SEO) -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo -->
+    <title>M-Tech</title>
+    <!-- Define o título da página que aparecerá na aba do navegador -->
+</head>
+<body>
+    <!-- Início do corpo da página -->
+    <div class="container">
+        <!-- Container principal que envolve o conteúdo da página -->
+
+        <!-- Navbar (barra de navegação) -->
+        <nav class="navbar">
+            <!-- Seção de navegação -->
+            <img id="logo" src="./img/m-tech01.jpg" alt="Logo da M-Tech" />
+            <!-- Imagem do logo da M-Tech -->
+            <select id="select-languages" aria-label="Selecione o Idioma">
+                <!-- Menu suspenso para seleção de idioma -->
+                <option value="pt">Português</option>
+                <!-- Opção de idioma Português -->
+                <option value="en">Inglês</option>
+                <!-- Opção de idioma Inglês -->
+            </select>
+            <button id="btn-login" aria-label="Login">Login</button>
+            <!-- Botão de login -->
+        </nav>
+
+        <!-- Cartão de História -->
+        <main class="story-card">
+            <!-- Seção principal que contém o conteúdo do cartão de história -->
+            <h1 class="story-card-title">M-Tech Curso de Informática</h1>
+            <!-- Título do cartão de história -->
+            <h2 class="story-card-subtitle">Aulas Presenciais de Terça à Sexta</h2>
+            <!-- Subtítulo do cartão de história -->
+
+            <!-- Formulário de login -->
+            <div class="form-hope">
+                <!-- Div que envolve o formulário de login -->
+                <h3 class="form-invitation">"Faça parte dessa jornada"</h3>
+                <!-- Convite para o usuário participar -->
+                <form id="login-form" class="form-hope-login" novalidate>
+                    <!-- Início do formulário de login, sem validação automática do HTML -->
+                    <div class="form-group">
+                        <!-- Grupo de entrada do e-mail -->
+                        <label for="input-email">E-mail:</label>
+                        <!-- Rótulo para o campo de e-mail -->
+                        <input id="input-email" type="email" placeholder="Digite seu e-mail" aria-label="Email" required />
+                        <!-- Campo de entrada para o e-mail, obrigatório -->
+                    </div>
+                    <div class="form-group">
+                        <!-- Grupo de entrada da senha -->
+                        <label for="input-password">Senha:</label>
+                        <!-- Rótulo para o campo de senha -->
+                        <input id="input-password" type="password" placeholder="Digite sua senha" aria-label="Senha" required />
+                        <!-- Campo de entrada para a senha, obrigatório -->
+                    </div>
+                </form>
+                <div class="button-container">
+                    <!-- Div que envolve o botão de envio -->
+                    <button id="btn-form" type="submit">Enviar</button>
+                    <!-- Botão para enviar o formulário -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Rodapé da página -->
+        <footer>
+            <!-- Início do rodapé -->
+            <img src="./img/m-tech02.jpg" alt="Imagem do M-Tech" />
+            <!-- Imagem que aparece no rodapé -->
+        </footer>    
+
+        <!-- Modal de Login (pop-up de login) -->
+        <div id="loginModal" class="login-modal">
+            <!-- Início da estrutura do modal de login -->
+            <div class="login-content">
+                <!-- Conteúdo do modal de login -->
+                <span class="close" aria-label="Fechar">&times;</span>
+                <!-- Botão para fechar o modal -->
+                <h2>Login</h2>
+                <!-- Título do modal de login -->
+                <form id="loginForm" novalidate>
+                    <!-- Início do formulário de login dentro do modal -->
+                    <label for="username">E-mail:</label>
+                    <!-- Rótulo para o campo de e-mail no modal -->
+                    <input type="email" id="username" placeholder="E-mail" required>
+                    <!-- Campo de entrada de e-mail no modal -->
+                    <button class="button" type="submit">Entrar</button>
+                    <!-- Botão de envio do formulário de login no modal -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Fim do container principal -->
+</body>
+</html>

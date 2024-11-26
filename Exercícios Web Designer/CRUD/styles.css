@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #60267A;
+    color: #FFB033;
+    margin: 0;
+    padding: 20px;
+}
+
+h3 {
+    color: #FFB033;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 2px solid #673F85;
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #FFB033;
+}
+
+button {
+    background-color: #673F85;
+    color: #FFB033;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FFB033;
+    color: #60267A;
+}
+
+#listaTarefas {
+    margin-top: 20px;
+    max-width: 500px;
+}
+
+.tarefa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #673F85;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.tarefa span {
+    color: #FFB033;
+    flex-grow: 1;
+    white-space: nowrap; /* Mantém o texto em uma linha */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.botao {
+    background-color: #FFB033;
+    color: #60267A;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 20px; /* Aumenta a distância entre os botões */
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: #60267A;
+    color: #FFB033;
+}
+
+
+

@@ -1,0 +1,112 @@
+/* Reseta estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #60267A;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    background-color: #673F85;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #FFB033;
+}
+
+/* Estilo da seção principal */
+main {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Resumo de pontos */
+.points-summary {
+    background-color: #673F85;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.points-summary .points {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFB033;
+}
+
+/* Detalhes de pontos */
+.points-details {
+    background-color: #60267A;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.points-details ul {
+    list-style-type: none;
+}
+
+.points-details li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #673F85;
+}
+
+.points-details li span {
+    color: #FFB033;
+}
+
+/* Ações */
+.actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.redeem {
+    background-color: #FFB033;
+    color: #60267A;
+}
+
+.earn-more {
+    background-color: #673F85;
+}
+
+/* Estilo do Rodapé */
+footer {
+    margin-top: auto;
+    background-color: #673F85;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    color: #FFB033;
+}
+

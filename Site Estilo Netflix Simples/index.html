@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Definindo que este é um documento HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Especifica o conjunto de caracteres como UTF-8, que suporta a maioria dos caracteres e símbolos usados no mundo -->
+
+    <!-- Define a página como responsiva para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- O "viewport" ajusta a escala do site, permitindo que ele se adapte a diferentes tamanhos de tela -->
+
+    <!-- Meta descrição: resume o conteúdo da página para motores de busca -->
+    <meta name="description" content="Cursos de informática com M-Tech, aulas de terça a sexta.">
+
+    <!-- Palavras-chave que ajudam nos resultados de busca (SEO) -->
+    <meta name="keywords" content="informática, cursos, M-Tech, tecnologia">
+
+    <!-- Link externo para o arquivo CSS -->
+    <link rel="stylesheet" href="index.css"> 
+    <!-- Define que o estilo da página será baseado no arquivo "index.css" -->
+
+    <!-- Título que aparecerá na aba do navegador -->
+    <title>M-Tech</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Div principal que agrupa todo o conteúdo da página -->
+
+        <!-- Navbar (barra de navegação) -->
+        <nav class="navbar">
+            <!-- Logo da M-Tech -->
+            <img id="logo" src="./img/m-tech01.jpg" alt="Logo da M-Tech" />
+            <!-- O atributo "alt" fornece uma descrição da imagem para leitores de tela e caso a imagem não carregue -->
+
+            <!-- Seleção de idioma -->
+            <select id="select-languages" aria-label="Selecione o Idioma">
+                <option value="pt">Português</option>
+                <option value="en">Inglês</option>
+                <!-- Mais opções de idioma podem ser adicionadas aqui -->
+            </select>
+
+            <!-- Botão de login -->
+            <button id="btn-login" aria-label="Login">Login</button>
+            <!-- O atributo "aria-label" melhora a acessibilidade, fornecendo informações adicionais para leitores de tela -->
+        </nav>
+
+        <!-- Cartão de História (seção principal do conteúdo) -->
+        <main class="story-card">
+            <!-- Título principal da página -->
+            <h1 class="story-card-title">M-Tech Curso de Informática</h1>
+            <!-- Subtítulo, descrevendo as aulas -->
+            <h2 class="story-card-subtitle">Aulas Presenciais de Terça à Sexta</h2>
+
+            <!-- Formulário para login -->
+            <div class="form-hope">
+                <!-- Texto que convida o usuário a se inscrever -->
+                <h3 class="form-invitation">"Faça parte dessa jornada"</h3>
+                
+                <!-- Formulário de login, sem validação automática (novalidate) -->
+                <form id="login-form" class="form-hope-login" novalidate>
+                    <!-- Campo de e-mail -->
+                    <div class="form-group">
+                        <label for="input-email">E-mail:</label>
+                        <input id="input-email" type="email" placeholder="Digite seu e-mail" aria-label="Email" required />
+                    </div>
+
+                    <!-- Campo de senha -->
+                    <div class="form-group">
+                        <label for="input-password">Senha:</label>
+                        <input id="input-password" type="password" placeholder="Digite sua senha" aria-label="Senha" required />
+                    </div>
+                </form>
+
+                <!-- Botão para enviar o formulário -->
+                <div class="button-container">
+                    <button id="btn-form" type="submit">Enviar</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Rodapé da página -->
+        <footer>
+            <!-- Imagem do rodapé da M-Tech -->
+            <img src="./img/m-tech02.jpg" alt="Imagem do M-Tech" />
+        </footer>
+
+        <!-- Modal de Login (geralmente controlado por JavaScript, não funcionará sem JS) -->
+        <div id="loginModal" class="login-modal">
+            <div class="login-content">
+                <!-- Botão para fechar o modal -->
+                <span class="close" aria-label="Fechar">&times;</span>
+
+                <!-- Título da janela modal -->
+                <h2>Login</h2>
+
+                <!-- Formulário simples de login no modal -->
+                <form id="loginForm" novalidate>
+                    <!-- Campo para e-mail -->
+                    <label for="username">E-mail:</label>
+                    <input type="email" id="username" placeholder="E-mail" required>
+                    
+                    <!-- Botão para submeter o login -->
+                    <button class="button" type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

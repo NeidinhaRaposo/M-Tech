@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+</head>
+<body>
+    <h3>Cronômetro</h3>
+    <p>Tempo: <span id="tempo">0</span> segundos</p>
+    <button onclick="iniciarCronometro()">Iniciar</button>
+    <button onclick="pararCronometro()">Parar</button>
+    <button onclick="resetarCronometro()">Resetar</button>
+
+    <script>
+        let tempo = 0;
+        let intervalo = null; // Certifique-se de inicializar com 'null'
+
+        function iniciarCronometro() {
+            // Evita múltiplos intervalos
+            if (intervalo === null) {
+                intervalo = setInterval(() => {
+                    tempo++;
+                    document.getElementById('tempo').textContent = tempo;
+                }, 1000);
+            }
+        }
+
+        function pararCronometro() {
+            // Garante que o intervalo seja parado
+            if (intervalo !== null) {
+                clearInterval(intervalo);
+                intervalo = null; // Reseta o valor para evitar múltiplos cliques
+            }
+        }
+
+        function resetarCronometro() {
+            tempo = 0;
+            document.getElementById('tempo').textContent = tempo;
+            pararCronometro(); // Chama a função parar para limpar o intervalo
+        }
+    </script>
+</body>
+</html>

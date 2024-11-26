@@ -1,0 +1,139 @@
+@import url('https://fonts.cdnfonts.com/css/circular-std');
+
+body{
+    background: rgba(0, 0, 0, 0.699) url(./27-1.png);
+    background-size: cover;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    font-family: 'Circular Std', sans-serif;
+
+    
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 57px;
+    max-height: 120px;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+}
+
+nav button{
+    height: 40px;
+    width: 85px;
+    background-color: rgb(90, 27, 126);
+    color: white;
+    font-family: 'Circular Std', sans-serif;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+select{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.459);
+    color: white;
+    
+}
+
+option{
+    font-family: 'Circular Std', sans-serif;
+    
+}
+
+.ppp{
+    display: flex;
+    justify-items: last baseline;
+}
+
+h2{
+    color:  rgb(110, 40, 151);
+    font-size: 50px;
+    margin-top: 0;
+}
+
+img {
+    width: 50px;
+}
+
+
+
+
+header{
+    color: white;
+    margin-top: 85px;
+}
+
+
+
+h4{
+    display: flex;
+    justify-content: center;
+    font-family: 'Circular Std', sans-serif;
+    max-height: 25px;
+    font-size: 21px;
+
+}
+
+
+p{
+    display: flex;
+    justify-content: center;
+    font-family: 'Circular Std', sans-serif;
+    font-size: 15px;
+    max-height: 4px;
+}
+
+
+
+input{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.527);
+    border: black;
+    height: 60px;
+    width: 350px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+::placeholder{
+    color: rgb(143, 139, 139);
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Circular Std', sans-serif;
+}
+
+.button button{
+    display: flex;
+    align-items: center;
+    background-color: rgb(90, 27, 126);
+    color: white;
+    height: 60px;
+    width: 135px;
+    margin-left: 10px;
+    font-size: 17px;
+    align-self: center;
+    padding: 25px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Circular Std', sans-serif;
+    
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}

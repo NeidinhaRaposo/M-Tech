@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de Senhas</title>
+</head>
+<body>
+<h3>Gerador de Senhas</h3>
+<label>Tamanho da senha: <input type="number" id="tamanhoSenha" min="4" max="20" value="8"></label>
+<button onclick="gerarSenha()">Gerar Senha</button>
+<p>Senha Gerada: <span id="senhaGerada"></span></p>
+
+
+<script>
+function gerarSenha() {
+const tamanho = document.getElementById('tamanhoSenha').value;
+const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()'; let senha = '';
+for (let i = 0; i < tamanho; i++) {
+const randomIndex = Math.floor(Math.random() * caracteres.length); senha += caracteres[randomIndex];
+}
+document.getElementById('senhaGerada').textContent = senha;
+}
+</script>
+</body>
+</html>
